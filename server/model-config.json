@@ -39,7 +39,19 @@
     "dataSource": null
   },
   "contact": {
-    "dataSource": "aws",
+    "dataSource": "postgres",
+    "public": true
+  },
+  "CoffeeShop": {
+    "dataSource": "postgres",
+    "public": true
+  },
+  "Review": {
+    "dataSource": "postgres",
+    "public": true
+  },
+  "Reviewer": {
+    "dataSource": "postgres",
     "public": true
   }
 }
