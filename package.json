@@ -7,7 +7,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "SET PORT=4001 && nodemon .",
+    "dev": "SET PORT=4001 && nodemon .",
+    "start": "node .",
     "posttest": "npm run lint"
   },
   "dependencies": {
