@@ -1,0 +1,26 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "postgres": {
+    "host": "",
+    "port": 0,
+    "url": "postgres://postgres:postgres@localhost:5432/testing",
+    "database": "",
+    "password": "",
+    "name": "postgres",
+    "user": "",
+    "connector": "postgresql"
+  },
+  "aws": {
+    "host": "testing.cd0sxtjevger.us-east-2.rds.amazonaws.com",
+    "port": 5432,
+    "url": "",
+    "database": "testing",
+    "password": "Prr4w>72",
+    "name": "aws",
+    "user": "postgres",
+    "connector": "postgresql"
+  }
+}
