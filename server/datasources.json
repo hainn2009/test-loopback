@@ -16,7 +16,7 @@
   "aws": {
     "host": "testing.cd0sxtjevger.us-east-2.rds.amazonaws.com",
     "port": 5432,
-    "url": "",
+    "url": "postgres://postgres:Prr4w>72@testing.cd0sxtjevger.us-east-2.rds.amazonaws.com:5432/testing",
     "database": "testing",
     "password": "Prr4w>72",
     "name": "aws",
