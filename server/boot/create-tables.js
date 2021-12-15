@@ -1,4 +1,4 @@
-var async = require("async");
+/*var async = require("async");
 module.exports = function (app) {
   // app.dataSources.postgres.automigrate("contact", function (err) {
   //   if (err) throw err;
@@ -109,3 +109,4 @@ module.exports = function (app) {
     });
   }
 };
+*/
