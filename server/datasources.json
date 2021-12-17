@@ -1,0 +1,45 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "postgres": {
+    "host": "",
+    "port": 0,
+    "url": "${POSTGRES_URL",
+    "database": "",
+    "password": "",
+    "name": "postgres",
+    "user": "",
+    "connector": "postgresql"
+  },
+  "aws": {
+    "host": "testing.cd0sxtjevger.us-east-2.rds.amazonaws.com",
+    "port": 5432,
+    "url": "${AWS_URL}",
+    "database": "testing",
+    "password": "${AWS_USER_PASSWORD",
+    "name": "aws",
+    "user": "${AWS_USER_NAME}",
+    "connector": "postgresql"
+  },
+  "myEmail": {
+    "name": "myEmail",
+    "connector": "mail",
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "smtp.gmail.com",
+        "secure": true,
+        "port": 465,
+        "tls": {
+          "rejectUnauthorized": false
+        },
+        "auth": {
+          "user": "${EMAIL_ID}",
+          "pass": "${EMAIL_PASSWORD}"
+        }
+      }
+    ]
+  }
+}

@@ -53,5 +53,8 @@
   "Reviewer": {
     "dataSource": "postgres",
     "public": true
+  },
+  "Email": {
+    "dataSource": "myEmail"
   }
 }
