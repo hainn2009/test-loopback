@@ -1,12 +1,15 @@
+const {calculateEmailContent} = require('../utils/utils');
 module.exports = function (app) {
   app.get("/helloworld", (req, res, next) => {
     res.send("Hello World");
   });
 
-  const isNeedRunning = false;
+  const isNeedRunning = true;
   if (isNeedRunning) {
     setTimeout(() => {
-      testEmail();
+      // testEmail();      
+      const result = calculateEmailContent()
+      console.log(result)
     }, 1000);
   }
 
