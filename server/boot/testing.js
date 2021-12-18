@@ -1,12 +1,16 @@
 module.exports = function (app) {
-  const isNeedRunning = true;
+  app.get("/helloworld", (req, res, next) => {
+    res.send("Hello World");
+  });
+
+  const isNeedRunning = false;
   if (isNeedRunning) {
     setTimeout(() => {
       testEmail();
     }, 1000);
   }
 
-  const testEmail = async () => {
+  const testEmail = () => {
     app.models.Email.send(
       {
         from: "test@test.com",

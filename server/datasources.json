@@ -6,7 +6,7 @@
   "postgres": {
     "host": "",
     "port": 0,
-    "url": "${POSTGRES_URL",
+    "url": "${POSTGRES_URL}",
     "database": "",
     "password": "",
     "name": "postgres",
@@ -18,9 +18,9 @@
     "port": 5432,
     "url": "${AWS_URL}",
     "database": "testing",
-    "password": "${AWS_USER_PASSWORD",
+    "password": "${AWS_PASSWORD}",
     "name": "aws",
-    "user": "${AWS_USER_NAME}",
+    "user": "${AWS_USERNAME}",
     "connector": "postgresql"
   },
   "myEmail": {

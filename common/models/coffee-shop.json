@@ -29,5 +29,63 @@
     }
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+    "createNew": {
+      "accepts": [
+        {
+          "arg": "msg",
+          "type": "string",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": {
+        "arg": "an_choi_co",
+        "type": "CoffeeShop"
+      },
+      "http": {
+        "verb": "get"
+      }
+    },
+    "sendMail": {
+      "accepts": [
+        {
+          "arg": "from",
+          "type": "string",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "to",
+          "type": "string",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "subject",
+          "type": "string",
+          "http": {
+            "source": "query"
+          }
+        },
+        {
+          "arg": "html",
+          "type": "string",
+          "http": {
+            "source": "query"
+          }
+        }
+      ],
+      "returns": {
+        "arg": "message",
+        "type": "string"
+      },
+      "http": {
+        "verb": "get"
+      }
+    }
+  }
 }
