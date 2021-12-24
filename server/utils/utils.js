@@ -3,8 +3,12 @@ const payload1 = require("./payload");
 
 const additionFields1 = [
   {
-    step: "Pickup Date Confirmed",
-    fields: ["newStatusName", "pickUpConfirmDate", "updatedAt"],
+    stepName: "Pickup Date Confirmed",
+    fields: [
+      { id: "newStatusName", name: "New Status Name" },
+      { id: "pickUpConfirmDate", name: "Pick Up Confirm Date" },
+      { id: "updatedAt", name: "Update At" },
+    ],
   },
 ];
 module.exports.calculateEmailContent = (
@@ -13,19 +17,24 @@ module.exports.calculateEmailContent = (
   payload = payload1
 ) => {
   let addedContent;
-  additionFields.map((step) => {
-    if (step.step === payload.newStatusName) {
-      addedContent = step.fields.reduce(
-        (prev, fieldName) => prev + `${fieldName}: ${payload[fieldName]}\n`,
-        ""
-      );
-    }
-  });
-  const index = updateStatusTemplate.indexOf("...");
-  const result = [
-    updateStatusTemplate.slice(0, index),
-    addedContent,
-    updateStatusTemplate.slice(index + 3),
-  ].join("");
+  const fieldsNeedToAdd = additionFields.find(
+    (step) => step.stepName === payload.newStatusName
+  );
+  if (fieldsNeedToAdd) {
+    addedContent = fieldsNeedToAdd.fields.reduce(
+      (prev, field) =>
+        prev + `<b>${field.name}</b>: ${payload[field.id]}<br />`,
+      ""
+    );
+    addedContent =
+      '<div style=" padding: 10px;"><p>Additional Information:</p><p style="border:1px solid gray;padding:10px">' +
+      addedContent +
+      "</p></div>";
+  } else addedContent = "";
+  const result = updateStatusTemplate.replace(
+    "##addititonalInformation##",
+    addedContent
+  );
+
   return result;
 };

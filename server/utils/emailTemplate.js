@@ -123,7 +123,7 @@ const templates = {
         <p>Status Message</p>
         <p style="border:1px solid gray;padding:10px">##statusRemarks##</p>
         </div>
-        ...
+        ##addititonalInformation##        
         <p>
         <p> Request Status Can be verified at ##portalUrl## </p>
         </div>

@@ -56,5 +56,9 @@
   },
   "Email": {
     "dataSource": "myEmail"
+  },
+  "meetup": {
+    "dataSource": "postgres",
+    "public": true
   }
 }
