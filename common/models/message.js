@@ -3,13 +3,17 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-'use strict';
+"use strict";
 
-module.exports = function(Message) {
-  Message.greet = function(msg, cb) {
-    process.nextTick(function() {
-      msg = msg || 'hello';
-      cb(null, 'Sender says ' + msg + ' to receiver');
+module.exports = function (Message) {
+  Message.greet = function (msg, cb) {
+    process.nextTick(function () {
+      msg = msg || "hello";
+      cb(null, "Sender says " + msg + " to receiver");
     });
+  };
+  Message.hello = (req, res) => {
+    const { firstName, lastName } = req.body;
+    res.send("Hello " + firstName + lastName);
   };
 };

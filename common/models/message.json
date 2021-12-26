@@ -23,6 +23,32 @@
       "http": {
         "verb": "get"
       }
+    },
+    "hello": {
+      "accepts": [
+        {
+          "arg": "req",
+          "type": "object",
+          "http": {
+            "source": "req"
+          }
+        },
+        {
+          "arg": "rea",
+          "type": "object",
+          "http": {
+            "source": "res"
+          }
+        }
+      ],
+      "returns": {
+        "arg": "message",
+        "type": "string",
+        "root": true
+      },
+      "http": {
+        "verb": "post"
+      }
     }
   }
 }
