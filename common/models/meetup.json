@@ -21,5 +21,25 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {}
+  "methods": {
+    "createMeetUp": {
+      "accepts": [
+        {
+          "arg": "meetUp",
+          "type": "meetup",
+          "http": {
+            "source": "body"
+          }
+        }
+      ],
+      "returns": {
+        "arg": "result",
+        "type": "object",
+        "root": true
+      },
+      "http": {
+        "verb": "post"
+      }
+    }
+  }
 }
