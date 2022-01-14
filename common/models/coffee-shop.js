@@ -4,6 +4,12 @@ module.exports = function (Coffeeshop) {
   Coffeeshop.createNew = async (msg) => {
     return { message: "Hello " + msg };
   };
+  Coffeeshop.getWithOtherInfo = async () => {
+    const coffeeShops = await Coffeeshop.find({
+      include: { reviews: "reviewer" },
+    });
+    return coffeeShops;
+  };
   Coffeeshop.sendMail = (from, to, subject, html, cb) => {
     // console.log(options);
     //const { from, to, subject, html };

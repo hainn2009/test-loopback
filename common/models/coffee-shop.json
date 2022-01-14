@@ -48,6 +48,32 @@
         "verb": "get"
       }
     },
+    "getWithOtherInfo": {
+      "accepts": [
+        {
+          "arg": "req",
+          "type": "object",
+          "http": {
+            "source": "req"
+          }
+        },
+        {
+          "arg": "rea",
+          "type": "object",
+          "http": {
+            "source": "res"
+          }
+        }
+      ],
+      "returns": {
+        "type": "array",
+        "root": true
+      },
+      "description": "Lấy thông tin CoffeeShop và tất cả các thông tin liên quan",
+      "http": {
+        "verb": "get"
+      }
+    },
     "sendMail": {
       "accepts": [
         {
